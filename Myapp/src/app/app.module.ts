@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './component/homepage/homepage.component';
 import { AboutComponent } from './component/about/about.component';
 import { ProjectsComponent } from './component/projects/projects.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -18,12 +22,19 @@ import { ProjectsComponent } from './component/projects/projects.component';
     HomepageComponent,
     AboutComponent,
     ProjectsComponent,
+    ContactComponent,
+
+
+
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+
 
   ],
 

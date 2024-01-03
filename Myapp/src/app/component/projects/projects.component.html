@@ -1,4 +1,4 @@
-<section class="project-section">
+<section class="project-section vh-100">
 
     <div class=" vh-100 container">
         <h1 class="project" [ngClass]="{'animate': animate}">PROJECTS</h1>
@@ -20,14 +20,16 @@
         </div>
 
         <div class="row">
-            <div *ngFor="let image of images; let i = index" (click)="toggleSize(i)" class="image-container">
+            <div *ngFor="let image of images; let i = index" (mouseenter)="toggleSize(i)" class="image-container">
                 <div class="image-wrapper">
-                    <img [ngClass]="{ 'small': image.small, 'big': !image.small }" [src]="image.src" alt="pic">
-                    <p class="text-center"><a href="{{image.link}}" class="text-center">{{image.description}}</a>
-                    </p>
+
+                    <div class="text-center"><a href="{{image.github}}" class="text-center"><img
+                                [ngClass]="{ 'small': image.small, 'big': !image.small }" [src]="image.src"
+                                alt="pic"></a></div>
                 </div>
             </div>
         </div>
+
 
 
 
