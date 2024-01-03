@@ -1,0 +1,47 @@
+<section class="about-section">
+
+    <div class=" vh-100 container">
+        <h1 class="aboutME" [ngClass]="{'animate': animate}">ABOUT ME</h1>
+
+
+        <div class="about-body text-start row">
+
+            <div class="col-lg-8">
+                <p>From running hospitality venues to cracking codes, I've always enjoyed solving problems my way. After
+                    graduating in hospitality, I worked in a restaurants and hotels before diving into making software.
+                </p>
+                <p>Transitioning from the hospitality industry to software engineering, I've embraced technology with
+                    the
+                    same
+                    passion.</p>
+
+                <p>Proficient in Angular, SpringBoot, JavaScript, TypeScript, SQL, HTML, and CSS, I've leveraged this
+                    tech
+                    prowess
+                    to craft
+                    impactful web applications across diverse sectors.</p>
+
+                <p>When I'm not wrapped up in computers, I'm out on the driving range or shooting hoops on the
+                    basketball
+                    court.
+                    That's where I unwind and recharge.</p>
+
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div *ngFor="let item of aboutMeList; let i = index" class="col-lg-3 tech-stack">
+                <div class="item-container text-center rounded border my-3" [ngClass]="{'animate-item': animate}">
+                    <img class="image" [src]="item.picture" alt="{{ item.name }}">
+                    <span class="name d-block mt-2">{{ item.name }}</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</section>

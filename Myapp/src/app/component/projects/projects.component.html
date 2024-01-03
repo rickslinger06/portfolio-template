@@ -1,0 +1,38 @@
+<section class="project-section">
+
+    <div class=" vh-100 container">
+        <h1 class="project" [ngClass]="{'animate': animate}">PROJECTS</h1>
+
+
+        <div class="project-body text-start row">
+
+            <div class="col-lg-8">
+
+                <p>
+                    I've been developing applications independently, employing a diverse range of technologies. Some of
+                    the technologies
+                    I've utilized encompass AWS CLoudfront, EC2, ElasticBeanstalk, RDS,Route53, mySQL, S3, GitHub ,
+                    googleAPI,
+                    openAI API,
+                    REST APIs, SpringBoot, Angular Framework, CSS, HTML, and various others.</p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let image of images; let i = index" (click)="toggleSize(i)" class="image-container">
+                <div class="image-wrapper">
+                    <img [ngClass]="{ 'small': image.small, 'big': !image.small }" [src]="image.src" alt="pic">
+                    <p class="text-center"><a href="{{image.link}}" class="text-center">{{image.description}}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</section>

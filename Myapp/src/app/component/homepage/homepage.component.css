@@ -1,0 +1,117 @@
+.navbar {
+    background: linear-gradient(to bottom, rgb(111, 111, 111), rgb(33, 33, 33));
+    display: flex;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+
+}
+
+.hompage-body {
+    background: linear-gradient(to right, #aea2efc4, #1d1d44);
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+
+button {
+    background-color: rgb(181, 182, 182);
+}
+
+
+
+.logo-container {
+    flex: 0 0 auto;
+
+}
+
+a {
+    padding-right: 52px;
+    cursor: pointer;
+}
+
+.nav-item a:hover {
+    color: rgb(111, 106, 243);
+
+}
+
+.nav-item .nav-link {
+
+    color: rgb(210, 210, 204);
+    font-size: 18px;
+    padding-right: 50px;
+}
+
+.item86logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.profile-image {
+    max-width: 100%;
+    border-radius: 30%;
+    padding-top: 20px;
+    max-height: 80vh;
+
+}
+
+.hello {
+    font-size: 80px;
+    font-weight: 300;
+    color: #1d1d44;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.name {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(81, 97, 238);
+}
+
+h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 26px;
+    color: rgba(56, 56, 57, 0.583);
+}
+
+a .bi {
+    font-size: 45px;
+    color: rgb(6, 52, 166);
+    opacity: 80%;
+}
+
+a>.bi-github {
+    color: black;
+    opacity: 80%;
+}
+
+/* Define the keyframes for the bouncing animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.arrow {
+    opacity: 50%;
+    animation: bounce 3s infinite;
+}
+
+.arrow .bi-arrow-down-circle {
+    font-size: 70px;
+}
