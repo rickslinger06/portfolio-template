@@ -1,23 +1,37 @@
 /* Section */
+
+
 #contact {
-    padding: 40px;
-    margin-top: 10px;
+    padding: 40px 0px;
     margin-bottom: 10px;
-    background: linear-gradient(to left, #aea2efc4, #7e7ea2);
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to left, #aea2efc4, #353555);
+    opacity: 50%;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 2.5s ease;
+
+
 }
+
+/* Define animation when the form enters the viewport */
+#contact.animate-item {
+    opacity: 1;
+    transform: translateX(0);
+
+}
+
 
 /* Heading */
 #contact h4 {
     text-align: center;
-    margin-bottom: 20px;
+
 }
 
 /* Form */
 #contact-form {
-    max-width: 400px;
+    width: 350px;
     margin: 0 auto;
+
+
 }
 
 /* Form inputs */

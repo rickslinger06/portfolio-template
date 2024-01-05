@@ -1,6 +1,6 @@
 <section class="project-section vh-100">
 
-    <div class=" vh-100 container">
+    <div class="container">
         <h1 class="project" [ngClass]="{'animate': animate}">PROJECTS</h1>
 
 
@@ -21,18 +21,16 @@
 
         <div class="row">
             <div *ngFor="let image of images; let i = index" (mouseenter)="toggleSize(i)" class="image-container">
-                <div class="image-wrapper">
+                <div class="image-wrapper text-center">
+                    <div class=" ">
+                        <img [ngClass]="{ 'small': image.small, 'big': !image.small }" [src]="image.src" alt="pic">
+                    </div>
+                    <a [ngClass]="{ 'small': image.small, 'big': !image.small }"
+                        href="{{image.github}}">{{image.description}}</a>
 
-                    <div class="text-center"><a href="{{image.github}}" class="text-center"><img
-                                [ngClass]="{ 'small': image.small, 'big': !image.small }" [src]="image.src"
-                                alt="pic"></a></div>
                 </div>
             </div>
         </div>
-
-
-
-
 
 
     </div>

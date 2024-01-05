@@ -1,0 +1,158 @@
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.section-head {
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(37, 37, 104);
+    opacity: 70%;
+    padding-bottom: 30px;
+
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+
+.timeline-date {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #706c6c;
+
+}
+
+
+.timeline-details::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(82, 79, 144, 0.692), transparent);
+    z-index: 1;
+}
+
+
+.timeline-date {
+
+    background-color: rgb(181, 174, 230);
+    padding: 5px;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 1;
+
+}
+
+.timeline .row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+
+    background-color: rgb(52, 67, 96);
+
+    z-index: 0;
+}
+
+.timeline-details {
+
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(208, 203, 240);
+    opacity: 0;
+    transform: translateY(20px);
+
+}
+
+.animate {
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Existing styles... */
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .timeline .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-icon {
+        order: -1;
+        margin-bottom: 20px;
+        /* Adjust spacing between icons */
+    }
+
+    .timeline-details {
+        background-color: rgb(208, 203, 240);
+        padding: 15px;
+        border-radius: 10px;
+        margin-left: 0;
+        margin-bottom: 20px;
+
+    }
+
+    .timeline-date {
+        background-color: rgb(208, 203, 240);
+        padding: 5px;
+        border-radius: 10px;
+        margin-left: 0;
+        margin-bottom: 20px;
+
+    }
+
+}

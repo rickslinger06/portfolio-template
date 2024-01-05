@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +11,8 @@ export class ContactComponent {
   lastName: string = '';
   email: string = '';
   message: string = '';
+
+  animateForm: boolean = false;
 
   constructor(private http: HttpClient) { }
 
@@ -39,5 +41,26 @@ export class ContactComponent {
           alert('Failed to send message. Please try again.');
         }
       );
+  }
+
+
+
+
+
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const contactElement = document.querySelector('#contact');
+    if (contactElement) {
+      const elementPosition = contactElement.getBoundingClientRect().top;
+      const scrollPosition = window.pageYOffset;
+
+      // Check if the contact form is in the viewport
+      if (elementPosition <= window.innerHeight - 50) {
+        this.animateForm = true;
+      } else {
+        this.animateForm = false;
+      }
+    }
   }
 }

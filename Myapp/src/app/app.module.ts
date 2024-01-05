@@ -8,6 +8,7 @@ import { ProjectsComponent } from './component/projects/projects.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ExperienceComponent } from './component/experience/experience.component';
 
 
 
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
+    ExperienceComponent,
 
 
 
